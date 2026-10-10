@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<section id="home">
+    <h2>Добро пожаловать в мой блог!</h2>
+    <p>Войдите или зарегистрируйтесь, чтобы продолжить.</p>
+
+    <div class="home-buttons">
+        <a href="{{ url_for('register') }}" class="btn">Регистрация</a>
+        <a href="{{ url_for('login') }}" class="btn">Войти</a>
+    </div>
+</section>
+{% endblock %}

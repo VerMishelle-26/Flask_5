@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %}Главная — Мой блог{% endblock %}
+
+{% block content %}
+<section id="about">
+    <h2>Обо мне</h2>
+    <p>
+        Привет! Меня зовут <strong>VerMishelle</strong>.
+        Я учусь на Python-разработчика и активно развиваюсь
+        в области веб-разработки, баз данных и алгоритмов.
+    </p>
+    <img src="{{ url_for('static', filename='image.jpg') }}" alt="Моё фото">
+</section>
+
+<section id="skills">
+    <h2>Мои навыки</h2>
+    <ul>
+        <li>Python — <em>продвинутый уровень</em></li>
+        <li>Flask — <em>средний уровень</em></li>
+        <li>SQL, PostgreSQL — <em>средний уровень</em></li>
+        <li>Git, GitHub — <em>продвинутый уровень</em></li>
+        <li>Linux — <em>средний уровень</em></li>
+    </ul>
+</section>
+
+<section id="progress">
+    <h2>Прогресс по курсу</h2>
+    <table>
+        <thead>
+    <tr>
+        <th>Тема</th>
+        <th>Основы Python</th>
+        <th>ООП</th>
+        <th>Асинхронность</th>
+        <th>SQLAlchemy</th>
+        <th>FastAPI</th>
+        <th>Flask</th>
+        <th>Django</th>
+        <th>Тема 4</th>
+    </tr>
+</thead>
+        <tbody>
+            <tr>
+                <td>% выполнения темы</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>80%</td>
+                <td>70%</td>
+                <td>60%</td>
+                <td>30%</td>
+                <td>0%</td>
+                <td>Освоено</td>
+            </tr>
+            <tr>
+                <td>% выполнения ДЗ</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>75%</td>
+                <td>65%</td>
+                <td>55%</td>
+                <td>20%</td>
+                <td>0%</td>
+                <td>Освоено</td>
+            </tr>
+            <tr>
+                <td>Комментарии</td>
+                <td>Освоено</td>
+                <td>Отлично</td>
+                <td>В процессе</td>
+                <td>Изучаю ORM</td>
+                <td>Практика API</td>
+                <td>Начало</td>
+                <td>Не начато</td>
+                <td>Практика</td
+            </tr>
+            <tr>
+                <td>Тема 3: Шаблоны и формы</td>
+                <td>Шаблоны Jinja2</td>
+                <td>Формы</td>
+                <td>Словарик</td>
+                <td>Наследование</td>
+                <td>Маршруты</td>
+                <td>Освоено</td>
+                <td>В планах</td>
+                <td>Освоено</td
+            </tr>
+            <tr>
+                <td>Тема 4: Работа с БД в Flask</td>
+                <td>SQLAlchemy</td>
+                <td>Модели</td>
+                <td>Миграции</td>
+                <td>Flask-Migrate</td>
+                <td>SQLite</td>
+                <td>Освоено</td>
+                <td>В планах</td>
+                <td>Освоено</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+{% endblock %}

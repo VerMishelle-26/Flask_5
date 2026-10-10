@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Вход{% endblock %}
+
+{% block content %}
+<section>
+    <h2>Вход</h2>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+            <p class="flash {{ category }}">{{ message }}</p>
+        {% endfor %}
+    {% endwith %}
+
+    <form method="post" class="note-form">
+        <label for="username">Логин:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Войти</button>
+    </form>
+
+    <a href="{{ url_for('register') }}" class="back-link">Нет аккаунта? Зарегистрироваться</a>
+</section>
+{% endblock %}
